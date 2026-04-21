@@ -142,11 +142,15 @@ class TrainingPipeline:
             if label_col not in phenotypes.columns:
                 print(f"  ⚠ Skipping {disease}: label column not found")
                 continue
-
+if strat_key.value_counts().min() < 2:
             y = phenotypes[label_col].values
 
             # Population-stratified train/test split
             strat_key = sample_meta["population"].astype(str) + "_" + y.astype(str)
+            if strat_key.value_counts().min() < 2:
+                strat_key = y
+                if pd.Series(y).value_counts().min() < 2:
+                    strat_key = None
             X_train, X_test, y_train, y_test, meta_train, meta_test = train_test_split(
                 features, y, sample_meta,
                 test_size=self.data_config.test_size,
