@@ -142,10 +142,10 @@ class TrainingPipeline:
             if label_col not in phenotypes.columns:
                 print(f"  ⚠ Skipping {disease}: label column not found")
                 continue
-if strat_key.value_counts().min() < 2:
+
             y = phenotypes[label_col].values
 
-            # Population-stratified train/test split
+            # Population-stratified train/test split (with safe fallback)
             strat_key = sample_meta["population"].astype(str) + "_" + y.astype(str)
             if strat_key.value_counts().min() < 2:
                 strat_key = y
