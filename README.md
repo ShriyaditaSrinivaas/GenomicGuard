@@ -1,10 +1,10 @@
-<![CDATA[<div align="center">
+<div align="center">
 
 # 🧬 GenomicGuard
 
 ### Interpretable Clinical Genomics Risk Assessment with Fairness Auditing
 
-[![CI](https://github.com/shriyaditasrinivaas/GenomicGuard/actions/workflows/ci.yml/badge.svg)](https://github.com/shriyaditasrinivaas/GenomicGuard/actions)
+[![CI](https://github.com/ShriyaditaSrinivaas/GenomicGuard/actions/workflows/ci.yml/badge.svg)](https://github.com/ShriyaditaSrinivaas/GenomicGuard/actions)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
@@ -66,7 +66,7 @@ Current clinical workflows cannot combine genomic, phenotypic, and historical da
 
 ```bash
 # Clone the repository
-git clone https://github.com/shriyaditasrinivaas/GenomicGuard.git
+git clone https://github.com/ShriyaditaSrinivaas/GenomicGuard.git
 cd GenomicGuard
 
 # Install dependencies
@@ -234,4 +234,3 @@ MIT License — see [LICENSE](LICENSE) for details.
 <div align="center">
 <i>Built for equitable precision medicine 🧬</i>
 </div>
-]]>
